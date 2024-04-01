@@ -8,8 +8,8 @@ from timedelta import Timedelta
 from finbert_utils import estimate_sentiment
 import time  # Using time module for synchronous sleep
 
-API_KEY = "AKVNVTBJ85YWMXTO8YD2"
-API_SECRET = "yWOfwxeZIYxbO9tl77vc0CXGdKjbZhtVZxjH1DZU"
+API_KEY = "Your key"
+API_SECRET = "your secrey"
 BASE_URL = "https://api.alpaca.markets"
 
 ALPACA_CREDS = {
