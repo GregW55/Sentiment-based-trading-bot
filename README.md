@@ -26,7 +26,7 @@ Clone the repository:
 
 git clone https://github.com/GregW55/Sentiment-based-trading-bot.git
 
-cd MLTrader
+cd Sentiment-based-trading-bot
 
 Install the required libraries:
 
