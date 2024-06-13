@@ -24,7 +24,7 @@ Libraries: lumibot, alpaca_trade_api, finbert_utils, datetime, time
 Clone the repository:
 
 
-git clone https://github.com/yourusername/MLTrader.git
+git clone https://github.com/GregW55/Sentiment-based-trading-bot.git
 
 cd MLTrader
 
