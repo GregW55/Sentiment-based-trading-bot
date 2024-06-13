@@ -69,3 +69,11 @@ main Function
 Sets the trading period and initializes the Alpaca broker and the MLTrader strategy.
 
 Runs the trading bot in a loop, executing trading iterations and handling sleep intervals.
+
+# Notes: 
+
+Ensure you have sufficient funds in your Alpaca account to execute trades.
+
+This bot is configured to trade the NVDA stock; you can modify the symbol and parameters as needed.
+
+Always test the bot in a paper trading environment before deploying it with real funds.
