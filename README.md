@@ -1,11 +1,71 @@
-# Sentiment-based-trading-bot
-Trading bot built around getting the sentiment of the news
-uses position sizing function to determine how much of the stock it can buy, getting the cash, the last price of the symbol and then calculating the quantity off those numbers(and returning all of these variables)
-uses Timedelta to get todays date to calculate the news for today and the days prior
-uses the finbert utils model to get a sentiment(the tensor, and probability) of the news, for example it could be positive and 90% or neutral and 40%.
+# MLTrader: Sentiment-Based Trading Bot
+# MLTrader is a sentiment-based trading bot designed to execute trades on the Alpaca platform. The bot uses sentiment analysis from news headlines to make informed trading decisions for the NVDA stock. This bot leverages the FinBERT model for sentiment estimation and the Alpaca API for executing trades.
 
-using the variables and sentiment before, the trading loop is very simple.
-getting the variables needs, if the sentiment is postive and its 65% probably its positive(you can adjust this number to your liking 99% works but for small amounts of news on a single symbol like NNVDA it was taking a long time to see any actions, then you want to buy up as much stock as possible(95% of total cash can also lower this value to your liking)
-it will do the same for negative sentiment except it will sell all of the stock it has purchased
+Features:
 
-this simple method proves very effective over the backtest period of 4 years, giving a total return of 1000% much higher than the base!
+Sentiment Analysis: Utilizes FinBERT to estimate sentiment from news headlines.
+
+Position Sizing: Determines the optimal quantity of stock to trade based on available cash.
+
+Automated Trading: Places buy and sell orders based on sentiment analysis.
+
+Bracket Orders: Uses bracket orders to set take-profit and stop-loss prices.
+
+Scheduled Execution: Periodically checks for trading conditions and executes trades accordingly.
+
+Requirements
+
+Python 3.8+
+
+Libraries: lumibot, alpaca_trade_api, finbert_utils, datetime, time
+
+Installation:
+
+Clone the repository:
+
+
+git clone https://github.com/yourusername/MLTrader.git
+
+cd MLTrader
+
+Install the required libraries:
+
+
+pip install lumibot alpaca_trade_api finbert-utils
+
+Setup
+
+Alpaca API Keys: Obtain your API key and secret from the Alpaca dashboard.
+
+Update API Credentials: Replace "Your key" and "your secret" in the code with your actual Alpaca API key and secret.
+
+
+API_KEY = "Your key"
+
+API_SECRET = "your secret"
+
+Usage
+
+Run the Bot:
+
+python mltrader.py
+
+Code Structure
+
+MLTrader Class
+
+Initialization: Sets up the trading parameters, including the stock symbol and the cash at risk.
+
+Position Sizing: Calculates the quantity of stock to trade based on available cash and last price.
+
+Date Handling: Retrieves the current date and three days prior for fetching news.
+
+Sentiment Analysis: Uses FinBERT to estimate sentiment from news headlines.
+
+Trading Logic: Makes buy or sell decisions based on the sentiment and places orders accordingly.
+
+main Function
+
+Sets the trading period and initializes the Alpaca broker and the MLTrader strategy.
+
+Runs the trading bot in a loop, executing trading iterations and handling sleep intervals.
