@@ -1,7 +1,7 @@
 # MLTrader: Sentiment-Based Trading Bot
 # MLTrader is a sentiment-based trading bot designed to execute trades on the Alpaca platform. The bot uses sentiment analysis from news headlines to make informed trading decisions for the NVDA stock. This bot leverages the FinBERT model for sentiment estimation and the Alpaca API for executing trades.
 
-Features:
+# Features:
 
 Sentiment Analysis: Utilizes FinBERT to estimate sentiment from news headlines.
 
@@ -13,13 +13,13 @@ Bracket Orders: Uses bracket orders to set take-profit and stop-loss prices.
 
 Scheduled Execution: Periodically checks for trading conditions and executes trades accordingly.
 
-Requirements
+# Requirements
 
 Python 3.8+
 
 Libraries: lumibot, alpaca_trade_api, finbert_utils, datetime, time
 
-Installation:
+# Installation:
 
 Clone the repository:
 
@@ -33,7 +33,7 @@ Install the required libraries:
 
 pip install lumibot alpaca_trade_api finbert-utils
 
-Setup
+# Setup:
 
 Alpaca API Keys: Obtain your API key and secret from the Alpaca dashboard.
 
@@ -44,7 +44,7 @@ API_KEY = "Your key"
 
 API_SECRET = "your secret"
 
-Usage
+# Usage: 
 
 Run the Bot:
 
